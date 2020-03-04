@@ -15,7 +15,7 @@ services:
   - docker
 
 before_install:
-  - "mvn -e clean package"
+  - "mvn clean package --quiet"
   - "mkdir -p ${TRAVIS_BUILD_DIR}/${LOGSTASH_LOGS_DIR}"
   - "touch ${TRAVIS_BUILD_DIR}/${LOGSTASH_LOGS_DIR}/${LOGSTASH_LOGFILE}"
   - "sudo chown 1000 ${TRAVIS_BUILD_DIR}/${LOGSTASH_LOGS_DIR}/${LOGSTASH_LOGFILE}"
